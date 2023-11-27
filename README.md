@@ -59,5 +59,5 @@ Here's an example of what your `.env` file should look like:
 
 ```env
 PORT=3000
-REACT_APP_ENVL=
+REACT_APP_ENV=
 ```
