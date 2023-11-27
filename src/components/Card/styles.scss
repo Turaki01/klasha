@@ -1,0 +1,13 @@
+.card-hover {
+  &:hover {
+    background-color: #000000;
+
+    p {
+      color: #ffffff;
+    }
+
+    h3 {
+      color: #ffffff;
+    }
+  }
+}

@@ -1,47 +1,16 @@
-import Button from "components/Button";
-import DaySelector from "components/DaySelector";
-import { DayObjectInterface } from "interfaces/util-interface";
 import React from "react";
-import { listOfDays } from "utils/constant";
 
-import ChevronIcon from "assets/svg/chevron-down.svg";
-
+import LineChart from "components/LineChart";
+import Card from "components/Card";
 const DashboardChart = () => {
-  const [selectedDay, setSelectedDay] = React.useState<DayObjectInterface>();
-  const handleDaySelection = (value: DayObjectInterface) => {
-    setSelectedDay(value);
-  };
+  const labels = ["20 Aug", "21 Aug", "22 Aug", "23 Aug", "24 Aug", "25 Aug"];
+  const data = [1500, 2100, 2100, 1900, 2800, 1900];
+
   return (
-    <div>
-      <div className="flex items-center">
-        <h3 className="text-[20px] leading-[32px] mr-2">Sales</h3>
-        <div className="border-r border-solid border-[#e5e5e5] h-[25px] mr-3"></div>
-
-        <div className="flex">
-          {listOfDays.map((el, index) => (
-            <DaySelector
-              key={index + el.value}
-              dayElement={el}
-              handleClick={() => handleDaySelection(el)}
-              isActive={selectedDay?.value === el.value}
-            />
-          ))}
-        </div>
-
-        <Button
-          icon={ChevronIcon}
-          iconHeight={14}
-          iconWidth={14}
-          label="Download report"
-          borderColor="#0A0A0A"
-          bgColor="#ffffff"
-          color="#0A0A0A"
-          border={8}
-          height={45}
-          fontSize={14}
-          paddingX={1}
-        />
-      </div>
+    <div className="mb-10">
+      <Card isHover={false} height={23} paddingX={25} paddingY={0}>
+        <LineChart labels={labels} data={data} borderYGrid={false} />
+      </Card>
     </div>
   );
 };

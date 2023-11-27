@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.scss";
 
 interface CardProps {
   children: React.ReactNode;
@@ -8,6 +9,7 @@ interface CardProps {
   paddingY?: number;
   borderRadius?: number;
   height?: number;
+  isHover?: boolean;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -17,7 +19,8 @@ const Card: React.FC<CardProps> = ({
   paddingX = 10,
   paddingY = 10,
   borderRadius = 8,
-  height = 13
+  height = 13,
+  isHover = true
 }) => {
   return (
     <div
@@ -27,7 +30,7 @@ const Card: React.FC<CardProps> = ({
         borderRadius: `${borderRadius}px`,
         height: `${height}rem`
       }}
-      className=" hover:bg-[#000000]"
+      className={`${isHover && "card-hover"}`}
     >
       {children}
     </div>

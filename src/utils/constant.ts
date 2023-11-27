@@ -1,4 +1,7 @@
-import { DayObjectInterface } from "interfaces/util-interface";
+import {
+  DayObjectInterface,
+  DropdownInterface
+} from "interfaces/util-interface";
 
 export const listOfDays: DayObjectInterface[] = [
   {
@@ -8,5 +11,20 @@ export const listOfDays: DayObjectInterface[] = [
   {
     name: "30 days",
     value: "30"
+  }
+];
+
+export const currencyList: DropdownInterface[] = [
+  {
+    name: "USD",
+    value: "USD"
+  },
+  {
+    name: "NGN",
+    value: "NGN"
+  },
+  {
+    name: "GDP",
+    value: "GDP"
   }
 ];
