@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
+
+ [[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=21600"
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, s-max-age=21600"
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, s-max-age=8600"
