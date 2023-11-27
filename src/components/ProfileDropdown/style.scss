@@ -1,15 +1,15 @@
-.dropdown-container {
+.profile-dropdown-container {
   display: inline-block;
   position: relative;
   min-height: 0;
   &:hover {
-    .dropdownWrapper {
+    .profile-dropdownWrapper {
       display: block;
       border: 1px solid #eeeeee;
     }
   }
 
-  .dropdownWrapper {
+  .profile-dropdownWrapper {
     display: none;
     position: absolute;
     top: 100%;
@@ -23,7 +23,7 @@
     overflow: hidden;
   }
 
-  .dropdownMenu {
+  .profile-dropdownMenu {
     p {
       &:hover {
         background-color: #ef2c5a;
