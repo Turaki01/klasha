@@ -6,6 +6,10 @@ import { Routes } from "./routes-constants";
 const Dashboard = lazyWithRetry(() =>
   componentLoader(() => import("pages/dashboard/index"))
 );
+
+const Transactions = lazyWithRetry(() =>
+  componentLoader(() => import("pages/transactions/index"))
+);
 // component imports
 
 type ReactFunctionalComponent = () => JSX.Element | null;
@@ -28,6 +32,12 @@ const AppRoutes: RoutesInterface[] = [
     exact: true,
     isPrivate: true,
     component: Dashboard
+  },
+  {
+    path: Routes.Transactions,
+    exact: true,
+    isPrivate: true,
+    component: Transactions
   }
   // Dashboard
 ];
