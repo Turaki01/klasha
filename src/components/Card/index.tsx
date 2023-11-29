@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({
         borderRadius: `${borderRadius}px`,
         height: `${height}rem`
       }}
-      className={`${isHover && "card-hover"}`}
+      className={`${isHover && "card-hover"} md:mb-0 mb-6`}
     >
       {children}
     </div>

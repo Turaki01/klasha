@@ -10,7 +10,7 @@ const DashboardOverview = () => {
   const yearlyData = [900, 1800, 5000, 1200, 2800, 3000];
 
   return (
-    <div className="mt-5 grid grid-cols-4 gap-4">
+    <div className="mt-5 md:grid grid-cols-4 gap-4">
       <Card height={15} paddingX={20} paddingY={20}>
         <p className="font-[400] text-[14px] leading-[20px] mb-1">
           Today&apos;s sales

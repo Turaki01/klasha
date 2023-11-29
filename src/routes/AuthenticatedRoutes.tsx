@@ -29,7 +29,7 @@ const AuthenticatedRoutes = () => {
 
   return (
     <div className="flex h-[100vh]">
-      <div className="w-[17.5rem] flex flex-col justify-between bg-[#FFFBF7] overflow-y-auto">
+      <div className="sidebar">
         <div className="p-6">
           <Logo width={95} className="mb-6" />
 
@@ -150,7 +150,7 @@ const AuthenticatedRoutes = () => {
           />
         </div>
       </div>
-      <div className="w-[calc(100%_-17.5rem)] bg-[#ffffff] overflow-y-auto">
+      <div className="md:w-[calc(100%_-17.5rem)] bg-[#ffffff] overflow-y-auto">
         <Nav />
         <Switch>
           {AuthenticatedRoutes.map((route) => {
