@@ -11,7 +11,7 @@ const DashboardOverview = () => {
 
   return (
     <div className="mt-5 md:grid grid-cols-4 gap-4">
-      <Card height={15} paddingX={20} paddingY={20}>
+      <Card height={16} paddingX={20} paddingY={20}>
         <p className="font-[400] text-[14px] leading-[20px] mb-1">
           Today&apos;s sales
         </p>
@@ -20,7 +20,7 @@ const DashboardOverview = () => {
           <NairaFormatter amount={"1652.50"} />
         </h3>
       </Card>
-      <Card height={15} paddingX={20} paddingY={20}>
+      <Card height={16} paddingX={20} paddingY={20}>
         <div className="flex flex-col justify-between h-full">
           <p className="font-[400] text-[14px] leading-[20px]">
             24 Aug - 01 Sep 21
@@ -48,7 +48,7 @@ const DashboardOverview = () => {
         </div>
       </Card>
 
-      <Card height={15} paddingX={20} paddingY={20}>
+      <Card height={16} paddingX={20} paddingY={20}>
         <div className="flex flex-col justify-between h-full">
           <p className="font-[400] text-[14px] leading-[20px]">
             24 Aug - 01 Sep 21
@@ -76,7 +76,7 @@ const DashboardOverview = () => {
         </div>
       </Card>
 
-      <Card height={15} paddingX={20} paddingY={20}>
+      <Card height={16} paddingX={20} paddingY={20}>
         <div className="flex flex-col justify-between h-full">
           <p className="font-[400] text-[14px] leading-[20px]">
             24 Aug - 01 Sep 21

@@ -21,15 +21,23 @@ import { GoMegaphone } from "react-icons/go";
 import { TbArrowsRightLeft } from "react-icons/tb";
 import Button from "components/Button";
 import Nav from "components/Nav";
+import AppContext from "context/appContext";
 
 // Menu SVG import
 
 const AuthenticatedRoutes = () => {
   const AuthenticatedRoutes = AppRoutes.filter((route) => route.isPrivate);
 
+  const { ishamburgerOpened, storehamburgerOption } =
+    React.useContext(AppContext);
+
+  const handlePanelClosing = () => {
+    storehamburgerOption(false);
+  };
+
   return (
     <div className="flex h-[100vh]">
-      <div className="sidebar">
+      <div className={`sidebar ${ishamburgerOpened ? "mobile-menu-show" : ""}`}>
         <div className="p-6">
           <Logo width={95} className="mb-6" />
 
@@ -42,6 +50,7 @@ const AuthenticatedRoutes = () => {
               to={Routes.Dashboard}
               className="h-[40px] rounded-[8px] flex items-center text-[#0A0A0A] text-[15px] cursor-pointer font-[400]"
               activeClassName={"!text-[#EF2C5A] !font-[600]"}
+              onClick={() => storehamburgerOption(false)}
             >
               <PiChartPieSlice size={23} className="mr-2" /> Dashboard
             </NavLink>
@@ -58,6 +67,7 @@ const AuthenticatedRoutes = () => {
               to={Routes.Transactions}
               className="h-[40px] rounded-[8px] flex items-center text-[#0A0A0A] text-[15px] cursor-pointer font-[400]"
               activeClassName={"!text-[#EF2C5A] !font-[600]"}
+              onClick={() => storehamburgerOption(false)}
             >
               <PiArrowsDownUp size={23} className="mr-2" /> Transactions
             </NavLink>
@@ -93,7 +103,7 @@ const AuthenticatedRoutes = () => {
             </p>
 
             <NavLink
-              to={Routes.ExchangeRates}
+              to={Routes.Checkout}
               className="h-[40px] rounded-[8px] flex items-center text-[#0A0A0A] text-[15px] cursor-pointer font-[400]"
               activeClassName={"!text-[#EF2C5A] !font-[600]"}
             >
@@ -102,7 +112,7 @@ const AuthenticatedRoutes = () => {
             </NavLink>
 
             <NavLink
-              to={Routes.ExchangeRates}
+              to={Routes.PaymentLinks}
               className="h-[40px] rounded-[8px] flex items-center text-[#0A0A0A] text-[15px] cursor-pointer font-[400]"
               activeClassName={"!text-[#EF2C5A] !font-[600]"}
             >
@@ -114,7 +124,7 @@ const AuthenticatedRoutes = () => {
             </p>
 
             <NavLink
-              to={Routes.ExchangeRates}
+              to={Routes.Wire}
               className="h-[40px] rounded-[8px] flex items-center text-[#0A0A0A] text-[15px] cursor-pointer font-[400]"
               activeClassName={"!text-[#EF2C5A] !font-[600]"}
             >
@@ -146,26 +156,29 @@ const AuthenticatedRoutes = () => {
             border={8}
             height={40}
             fontSize={14}
+            onClick={handlePanelClosing}
             paddingX={1}
           />
         </div>
       </div>
       <div className="md:w-[calc(100%_-17.5rem)] bg-[#ffffff] overflow-y-auto">
         <Nav />
-        <Switch>
-          {AuthenticatedRoutes.map((route) => {
-            return (
-              <Route
-                key={route.path}
-                exact={route.exact}
-                path={route.path}
-                component={route.component}
-              />
-            );
-          })}
+        <div onClick={() => storehamburgerOption(false)}>
+          <Switch>
+            {AuthenticatedRoutes.map((route) => {
+              return (
+                <Route
+                  key={route.path}
+                  exact={route.exact}
+                  path={route.path}
+                  component={route.component}
+                />
+              );
+            })}
 
-          <Redirect to={Routes.Dashboard} />
-        </Switch>
+            <Redirect to={Routes.Dashboard} />
+          </Switch>
+        </div>
       </div>
     </div>
   );
