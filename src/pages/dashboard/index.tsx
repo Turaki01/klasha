@@ -35,8 +35,8 @@ const Dashboard = () => {
 
       <DashboardOverview />
 
-      <div className="md:grid grid-cols-[68%_auto] gap-7 mb-5 mt-[3rem]">
-        <div className="md:grid grid-cols-[40%_auto] ">
+      <div className="lg:grid grid-cols-[68%_auto] gap-7 mb-5 mt-[3rem]">
+        <div className="lg:grid grid-cols-[40%_auto] ">
           <div className="flex items-center md:justify-start justify-between">
             <h3 className="text-[20px] leading-[32px] mr-2">Sales</h3>
             <div className="border-r border-solid border-[#e5e5e5] h-[25px] mr-3"></div>
@@ -60,7 +60,7 @@ const Dashboard = () => {
               />
             </div>
           </div>
-          <div className="md:grid grid-cols-[60%_auto] gap-2 md:mt-0 mt-5">
+          <div className="md:grid grid-cols-[60%_auto] gap-2 lg:mt-0 mt-5">
             <div className="mr-3 md:mb-0 mb-3">
               <DropdownComponent
                 placeholder="Email"
@@ -90,7 +90,7 @@ const Dashboard = () => {
         <div></div>
       </div>
 
-      <div className="md:grid grid-cols-[68%_auto] gap-7">
+      <div className="lg:grid grid-cols-[68%_auto] gap-7">
         <DashboardChart />
 
         <SendWire />

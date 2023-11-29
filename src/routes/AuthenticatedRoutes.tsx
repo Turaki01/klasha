@@ -161,7 +161,7 @@ const AuthenticatedRoutes = () => {
           />
         </div>
       </div>
-      <div className="md:w-[calc(100%_-17.5rem)] bg-[#ffffff] overflow-y-auto">
+      <div className="lg:w-[calc(100%_-17.5rem)] bg-[#ffffff] overflow-y-auto">
         <Nav />
         <div onClick={() => storehamburgerOption(false)}>
           <Switch>

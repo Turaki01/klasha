@@ -7,7 +7,7 @@ const DashboardChart = () => {
 
   return (
     <div className="mb-10">
-      <div className="border border-solid border-[#000000] rounded-[8px] px-[25px] md:h-[23rem] h-[10rem] md:mt-0 mt-10">
+      <div className="border border-solid border-[#000000] rounded-[8px] px-[25px] lg:h-[23rem] md:h-[23rem] h-[11rem] md:mt-0 mt-10">
         <LineChart labels={labels} data={data} borderYGrid={false} />
       </div>
     </div>

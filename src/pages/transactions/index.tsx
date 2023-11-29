@@ -43,7 +43,7 @@ const Transactions = () => {
         </div>
 
         <div className="py-6">
-          <div className="md:block hidden">
+          <div className="lg:block hidden">
             <TableComponent>
               <thead className="table__thead">
                 <tr className="table__head">
@@ -76,14 +76,14 @@ const Transactions = () => {
             </TableComponent>
           </div>
 
-          <div className="block md:hidden p-5">
+          <div className="block md:grid grid-cols-2 gap-8 lg:hidden p-5">
             {transactionHistory.map((transaction, index) => (
               <Card
                 key={transaction.transactionId + index}
                 paddingX={20}
                 paddingY={20}
                 isHover={false}
-                height={20}
+                height={23}
               >
                 <div className="grid grid-cols-2 gap-2 mb-4">
                   <div>

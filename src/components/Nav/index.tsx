@@ -10,7 +10,7 @@ const Nav = () => {
     <div className="flex px-5 items-center border-b border-solid border-[#EDEDED] h-[60px] justify-between">
       <div>
         <RxHamburgerMenu
-          className="md:hidden block"
+          className="lg:hidden block"
           size={25}
           onClick={() => storehamburgerOption(true)}
         />
