@@ -44,9 +44,25 @@ This project is built with react, typescript and tailwind
      environment variables (see below).
 
 4. Start the server.
+
    ```bash
    yarn start
    ```
+
+## Component Tree
+
+- [Button]
+- [Card]
+- [DaySelector]
+- [DropdownComponent]
+- [FullpageLoader]
+- [LanguageDropdown]
+- [LineChart]
+- [Nav]
+- [Pagination]
+- [ProfileDropdown]
+- [Search]
+- [TableComponent]
 
 ## Usage
 
