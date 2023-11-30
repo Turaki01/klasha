@@ -51,18 +51,28 @@ This project is built with react, typescript and tailwind
 
 ## Component Tree
 
-- [Button]
-- [Card]
-- [DaySelector]
-- [DropdownComponent]
-- [FullpageLoader]
-- [LanguageDropdown]
-- [LineChart]
-- [Nav]
-- [Pagination]
-- [ProfileDropdown]
-- [Search]
-- [TableComponent]
+- Button
+- Card
+- DaySelector
+- DropdownComponent
+- FullpageLoader
+- LanguageDropdown
+- LineChart
+- Nav
+- Pagination
+- ProfileDropdown
+- Search
+- TableComponent
+
+## Unit Test
+
+The current coverage for test is 5 Test Suites and 14 Tests in total
+
+### To run the test
+
+```bash
+ yarn test
+```
 
 ## Usage
 
