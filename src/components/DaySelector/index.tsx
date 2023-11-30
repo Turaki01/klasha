@@ -15,6 +15,7 @@ const DaySelector: React.FC<DaySelectorProps> = ({
   return (
     <div className="flex items-center">
       <p
+        data-testid="daySelectorEl"
         onClick={handleClick}
         className={`font-bold text-[14px] leading-[22.4px] mr-3 cursor-pointer ${
           isActive && "text-[#EF2C5A]"

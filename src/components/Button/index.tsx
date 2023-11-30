@@ -58,9 +58,12 @@ const Button: React.FC<ButtonProps> = ({
       disabled={disabled}
     >
       {isLoading ? (
-        <span className="loader"></span>
+        <span data-testid="buttonLoader" className="loader"></span>
       ) : (
-        <span className="flex justify-center items-center">
+        <span
+          data-testid="buttonText"
+          className="flex justify-center items-center"
+        >
           {icon && (
             <img
               src={icon}

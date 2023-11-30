@@ -36,8 +36,9 @@ const DropdownComponent: React.FC<DropdownComponentProps> = ({
     return result;
   };
   return (
-    <div className="custom-dropdown">
+    <div data-testid="dropDownComponent" className="custom-dropdown">
       <div
+        data-testid="dropDownComponentTrigger"
         className="cursor-pointer flex justify-between items-center h-[44px]"
         onClick={() => setOpen(!open)}
         style={{
@@ -46,7 +47,11 @@ const DropdownComponent: React.FC<DropdownComponentProps> = ({
           padding: `0 ${paddingX}px`
         }}
       >
-        <p className="mr-3 text-[14.5px]" style={{ color: textColor }}>
+        <p
+          data-testid="dropDownValue"
+          className="mr-3 text-[14.5px]"
+          style={{ color: textColor }}
+        >
           {(dropdownOption.length > 0 &&
             selectedOption !== "" &&
             truncateString(
@@ -63,7 +68,7 @@ const DropdownComponent: React.FC<DropdownComponentProps> = ({
         )}
       </div>
       {open && (
-        <div className="dropdown-menu">
+        <div data-testid="dropDownMenu" className="dropdown-menu">
           {dropdownOption.map((el, index) => (
             <p
               key={index + el.name}

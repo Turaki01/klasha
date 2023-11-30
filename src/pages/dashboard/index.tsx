@@ -29,7 +29,10 @@ const Dashboard = () => {
 
   return (
     <div className="mx-8 mt-[4rem]">
-      <h3 className="text-[#1A1A1A] font-[500] text-[20px] leading-[32px]">
+      <h3
+        data-testid="dashboardHeader"
+        className="text-[#1A1A1A] font-[500] text-[20px] leading-[32px]"
+      >
         Sales overview
       </h3>
 

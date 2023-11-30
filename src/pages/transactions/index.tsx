@@ -26,7 +26,10 @@ const Transactions = () => {
             <SearchInput />
           </div>
           <div className="flex md:justify-start justify-end md:mb-0 mb-5">
-            <div className="mr-3 border border-solid border-[#0A0A0A] rounded-[8px] px-4 flex items-center font-[500] cursor-pointer">
+            <div
+              data-testid="txnFilter"
+              className="mr-3 border border-solid border-[#0A0A0A] rounded-[8px] px-4 flex items-center font-[500] cursor-pointer"
+            >
               <span className="text-[13px] mr-1">Filter</span>
               <BsFilter size={18} />
             </div>
